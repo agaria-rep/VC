@@ -4,17 +4,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    #lang = request.cookies.get('lang')
-    if lang == None:
-        return redirect("/lang/ru/")
-    else:
-        return render_template("./"+lang+"/index.html")
-
-@app.route("/lang/<name>/")
-def lang(name):
-    response = make_response("s")
-    #response.set_cookie("lang", name)
-    
-    return "dw"
+    return render_template("/index.html")
 
 app.run(debug=True)
