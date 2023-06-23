@@ -15,6 +15,6 @@ def lang(name):
     response = make_response("s")
     #response.set_cookie("lang", name)
     
-    return response
+    return "dw"
 
 app.run(debug=True)
