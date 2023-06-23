@@ -12,7 +12,7 @@ def index():
 
 @app.route("/lang/<name>/")
 def lang(name):
-    response = make_response(redirect("/"))
+    response = make_response("s")
     response.set_cookie("lang", name)
     
     return response
