@@ -9,3 +9,11 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.title .text {
+    text-align: center;
+    color: white;
+    line-height: 4;
+    font-size: 24px;
+    font-weight: 500;
+}
