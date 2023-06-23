@@ -1,5 +1,5 @@
-html {
-    overflow: hidden;
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {
