@@ -5,4 +5,7 @@
     height: 635px;
     width: 100%;
     background-image: url('/static/images/index_map.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
