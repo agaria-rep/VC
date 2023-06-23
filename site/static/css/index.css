@@ -1,0 +1,8 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 635px;
+    width: 100%;
+    background-image: {{ url_for('static', filename='images/index_map.png') }};
+}
