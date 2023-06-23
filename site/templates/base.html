@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link href="{{ url_for('static', filename='./images/favicon.png') }}" type="image/png" rel="icon">
+        <link href="{{ url_for('static', filename='images/favicon.png') }}" type="image/png" rel="icon">
 
-        <link rel="stylesheet" href="{{ url_for('static', filename='./css/base.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
 
         {% block links %}{% endblock %}
 
@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="menu">
-            <a href="/" class="logo"><img src="{{ url_for('static', filename='./images/logo.png') }}" alt="OOVC"></a>
+            <a href="/" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="OOVC"></a>
             <a href="/" class="item">Главная</a>
             <a href="/countries" class="item">Страны</a>
             <a href="/map" class="item">Карта</a>
