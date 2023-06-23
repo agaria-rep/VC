@@ -3,6 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 635px;
-    width: 100vw;
-    background-image: url('static/images/index_map.png');
+    width: 100%;
+    background-image: url('/static/images/index_map.png');
 }
