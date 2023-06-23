@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    lang = request.cookies.get('lang')
+    #lang = request.cookies.get('lang')
     if lang == None:
         return redirect("/lang/ru/")
     else:
