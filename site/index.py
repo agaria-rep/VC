@@ -13,4 +13,4 @@ def map():
 
 @app.route("/map/load")
 def map_load():
-    return requests.get("https://oovc.piwerm.repl.co/map")
+    return requests.get("https://oovc.piwerm.repl.co/map").text
