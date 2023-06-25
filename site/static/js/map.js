@@ -28,15 +28,13 @@ async function loadMap() {
         let description = element.description;
         let geojson = element.geojson;
 
-        console.log(geojson);
-
         L.geoJSON(JSON.parse(geojson), {
             style: function(feature) {return {fillColor: feature.properties.fill, color: feature.properties.stroke}},
             pointToLayer: function(geoJsonPoint, latlng) {return L.marker(latlng, {icon: point_marker});},
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(`<div class="popup"><img src="${flag}" alt="Flag of Country"><a href="/countries/${id}">${name}</a><p>${description}</p></div>`);
             }
-        });
+        }).addTo(map);
     });
 }
 
