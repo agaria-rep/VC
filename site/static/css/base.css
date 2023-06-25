@@ -2,6 +2,15 @@
     display: none;
 }
 
+@keyframes show {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.showed {
+    animation: show 1s ease-in;
+}
+
 body {
     margin: 0%;
     padding: 0%;
