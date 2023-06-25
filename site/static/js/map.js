@@ -1,4 +1,3 @@
-var jsons;
 var map = L.map('map').setView([0, 0], 3);
 
 var point_marker = L.icon({
@@ -37,4 +36,5 @@ async function loadMap() {
         });
     });
 }
+
 loadMap();
