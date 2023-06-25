@@ -11,7 +11,8 @@ var capital_point_marker = L.icon({
 });
 
 async function loadMap() {
-    const jsons = await fetch("/map/load").json();
+    const resp = await fetch("/map/load");
+    const jsons = resp.json();
 
     L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
