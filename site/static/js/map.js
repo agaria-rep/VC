@@ -30,7 +30,7 @@ async function loadMap() {
 
         console.log(geojson);
 
-        L.geoJSON(geojson, {
+        L.geoJSON(JSON.parse(geojson), {
             style: function(feature) {return {fillColor: feature.properties.fill, color: feature.properties.stroke}},
             pointToLayer: function(geoJsonPoint, latlng) {return L.marker(latlng, {icon: point_marker});},
             onEachFeature: function (feature, layer) {
