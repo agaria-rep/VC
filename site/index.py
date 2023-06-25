@@ -9,5 +9,3 @@ def index():
 @app.route("/map")
 def map():
     return render_template("/map/index.html")
-
-app.run()
