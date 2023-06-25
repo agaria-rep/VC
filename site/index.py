@@ -11,5 +11,5 @@ def map():
     return render_template("/map/index.html")
 
 @app.route("/map/load")
-def map():
+def map_load():
     return "sdqw"
