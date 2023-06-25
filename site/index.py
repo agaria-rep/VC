@@ -10,7 +10,3 @@ def index():
 @app.route("/map")
 def map():
     return render_template("/map/index.html")
-
-@app.route("/map/load")
-def map_load():
-    return requests.get("https://oovc.piwerm.repl.co/map").text
