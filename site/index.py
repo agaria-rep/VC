@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template, redirect, url_for, make_response
+import requests
 
 app = Flask(__name__)
 
@@ -12,4 +13,4 @@ def map():
 
 @app.route("/map/load")
 def map_load():
-    return "sdqw"
+    return requests.get("https://oovc.piwerm.repl.co/map")
