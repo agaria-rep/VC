@@ -43,6 +43,8 @@ a:hover::after {
     display: flex;
     background-color: #808080A0;
     justify-content: space-around;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
     align-items: center;
     z-index: 1000;
 }
