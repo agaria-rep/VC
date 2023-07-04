@@ -8,3 +8,8 @@
     left: 11.4%;
     width: 84.9%;
 }
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+    background-color: white;
+    border-top-left-radius: 20px;
+}
