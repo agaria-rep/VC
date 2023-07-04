@@ -15,4 +15,3 @@ def map():
 def invite():
     return render_template("/invite/index.html")
 
-app.run()
