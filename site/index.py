@@ -11,4 +11,8 @@ def index():
 def map():
     return render_template("/map/index.html")
 
+@app.route("/invite")
+def invite():
+    return render_template("/invite/index.html")
+
 app.run()
