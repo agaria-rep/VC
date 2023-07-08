@@ -32,6 +32,3 @@ def auth_code():
 def auth_token():
     session["user_id"] = request.get_json()["user_id"]
     return redirect("/profile")
-
-if __name__ == "__main__":
-    app.run()
