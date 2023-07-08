@@ -23,7 +23,7 @@ def profile():
 @app.route("/code", methods=['GET', 'POST'])
 def auth_code():
     code = request.args.get("code")
-    return redirect("https://oauth.vk.com/access_token?client_id="+os.environ.get('api_key')+"&client_secret="+os.environ.get('api_secret_key')+"&redirect_uri=https://oovg.vercel.app/token&code="+code)
+    return redirect("https://oauth.vk.com/access_token?client_id="+os.environ.get('api_key')+"&client_secret="+os.environ.get('api_secret_key')+"&redirect_uri=https%3A%2F%2Foovg.vercel.app%F2token&code="+code)
 
 @app.route("/token", methods=['GET', 'POST'])
 def auth_token():
