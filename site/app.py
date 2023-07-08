@@ -18,7 +18,7 @@ def profile():
     if "user_id" in session:
         return render_template("/profile/index.html", id=session["user_id"])
     else:
-        return redirect("https://oauth.vk.com/authorize?client_id="+os.environ.get('api_key')+"&display=page&redirect_uri=https://oovg.vercel.app/code&scope=offline&response_type=code&v=5.131")
+        return redirect("https://oauth.vk.com/authorize?client_id="+os.environ.get('api_key')+"&display=popup&redirect_uri=https://oovg.vercel.app/code&scope=offline&response_type=code&v=5.131")
 
 @app.route("/code", methods=['GET', 'POST'])
 def auth_code():
