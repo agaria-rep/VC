@@ -18,17 +18,17 @@ def profile():
     if "user_id" in session:
         return render_template("/profile/index.html", id=session["user_id"])
     else:
-        return redirect("https://oauth.vk.com/authorize?client_id="+os.environ.get('api_key')+"&display=page&redirect_uri=https://oovg.vercel.app/profile/code&scope=offline&response_type=code&v=5.131")
+        return redirect("https://oauth.vk.com/authorize?client_id="+os.environ.get('api_key')+"&display=page&redirect_uri=https://oovg.vercel.app/code&scope=offline&response_type=code&v=5.131")
 
-@app.route("/profile/code", methods=['GET', 'POST'])
+@app.route("/code", methods=['GET', 'POST'])
 def auth_code():
     code = request.args.get("code")
     if code != None:
-        return redirect("https://oauth.vk.com/access_token?client_id="+os.environ.get('api_key')+"&client_secret="+os.environ.get('api_secret_key')+"&redirect_uri=https://oovg.vercel.app/profile/token&code="+code)
+        return redirect("https://oauth.vk.com/access_token?client_id="+os.environ.get('api_key')+"&client_secret="+os.environ.get('api_secret_key')+"&redirect_uri=https://oovg.vercel.app/token&code="+code)
     else:
         return redirect("/profile")
 
-@app.route("/profile/token", methods=['GET', 'POST'])
+@app.route("/token", methods=['GET', 'POST'])
 def auth_token():
     session["user_id"] = request.get_json()["user_id"]
     return redirect("/profile")
