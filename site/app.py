@@ -27,7 +27,12 @@ def profile():
 
 @app.route("/profile/auth", methods=['GET'])
 def profile_auth():
-    return render_template("/profile/auth.html")
+    session["user_id"] = request.args.get("uid")
+    session["name"] = request.args.get("first_name")
+    session["last_name"] = request.args.get("last_name")
+    session["photo"] = request.args.get("photo")
+
+    return redirect("/profile")
 
 if __name__ == "__main__":
     app.run(debug=True)
