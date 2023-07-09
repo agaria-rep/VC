@@ -2,11 +2,6 @@ from flask import Flask, render_template, request, redirect, url_for, flash, mak
 import requests
 import os
 
-if __name__ == "__main__":
-    os.environ.setdefault('secret_key', 'aboba')
-    os.environ.setdefault('api_key', '51698534')
-    os.environ.setdefault('api_secret_key', 'w0ENS8syb5rCbeUhbPPW')
-
 app = Flask(__name__)
 app.secret_key = os.environ.get('secret_key')
 
