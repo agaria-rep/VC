@@ -6,7 +6,7 @@
     width: 100%;
     background-color: #DEDEDE;
     background-image: url('/static/images/index/title.png');
-    background-position: center;
+    background-position: bottom;
     background-size: auto;
     background-repeat: no-repeat;
 }

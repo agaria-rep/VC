@@ -10,7 +10,8 @@
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
-        <div class="menu element-animation">
+        {% block body %}{% endblock %}
+        <div class="menu">
             <a href="/" class="logo"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="OOVC"></a>
             <a href="/" class="item">Главная</a>
             <a href="/countries" class="item">Страны</a>
@@ -19,6 +20,5 @@
             <a href="/profile" class="item">Профиль</a>
             <a href="" class="lang"></a>
         </div>
-        {% block body %}{% endblock %}
     </body>
 </html>
