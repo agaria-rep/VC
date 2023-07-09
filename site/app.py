@@ -2,6 +2,11 @@ from flask import Flask, render_template, request, redirect, url_for, flash, mak
 import requests
 import os
 
+if __name__ == "__main__":
+    os.environ.setdefault('secret_key', 'aboba')
+    os.environ.setdefault('api_key', '51698534')
+    os.environ.setdefault('api_secret_key', 'w0ENS8syb5rCbeUhbPPW')
+
 app = Flask(__name__)
 app.secret_key = os.environ.get('secret_key')
 
@@ -18,14 +23,11 @@ def profile():
     if "user_id" in session:
         return render_template("/profile/index.html", id=session["user_id"])
     else:
-        return redirect("https://oauth.vk.com/authorize?client_id="+os.environ.get('api_key')+"&display=page&redirect_uri=https://oovg.vercel.app/code&scope=offline&response_type=code&v=5.131")
+        return render_template("/profile/auth.html")
 
-@app.route("/code", methods=['GET', 'POST'])
-def auth_code():
-    code = request.args.get("code")
-    return redirect("https://oauth.vk.com/access_token?client_id="+os.environ.get('api_key')+"&client_secret="+os.environ.get('api_secret_key')+"&redirect_uri=https://oovg.vercel.app/token&code="+code)
+@app.route("/profile/auth", methods=['GET'])
+def profile_auth():
+    return render_template("/profile/auth.html")
 
-@app.route("/token", methods=['GET', 'POST'])
-def auth_token():
-    session["user_id"] = request.get_json()["user_id"]
-    return redirect("/profile")
+if __name__ == "__main__":
+    app.run(debug=True)
