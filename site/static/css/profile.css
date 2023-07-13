@@ -45,7 +45,7 @@ body {
 
 .info .add-info {
     align-self: flex-end;
-    margin-bottom: auto;
+    margin-top: auto;
     color: #006AA8;
     font-weight: bold;
 }
