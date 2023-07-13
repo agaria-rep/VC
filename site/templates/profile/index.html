@@ -7,5 +7,19 @@
 {% endblock %}
 
 {% block body %}
-Ваш ид: {{ id }}
+<div class="profile first">
+    <img src="{{ photo }}" alt="User's photo" class="photo">
+    <div class="info">
+        <div class="name">
+            <div class="first-name">{{ first_name }}</div>
+            <div class="last-name">{{ last_name }}</div>
+        </div>
+        <div class="id">ID: {{ user_id }}</div>
+        {% if user_id == "Неизвестно" %}
+            <a class="add-info" href="/profile/auth">Авторизоватся</a>
+        {% else %}
+            <a class="add-info" href="/profile/logout">Выйти</a>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}

@@ -12,9 +12,8 @@
 {% endblock %}
 
 {% block body %}
-<div class="title first">Вы не авторизованы!</div>
-<div id="vk_auth"></div>
+<div id="vk-auth first"></div>
 <script type="text/javascript">
-  VK.Widgets.Auth("vk_auth", {authUrl: "/profile/auth"});
+  VK.Widgets.Auth("vk-auth", {authUrl: "/profile/login"});
 </script>
 {% endblock %}
