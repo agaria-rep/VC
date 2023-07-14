@@ -39,7 +39,7 @@ def profile_login():
     session["user_id"] = request.args.get("uid")
     session["name"] = request.args.get("first_name")
     session["last_name"] = request.args.get("last_name")
-    session["photo"] = request.args.get("photo")
+    session["photo"] = request.args.get("photo_rec")
 
     return redirect("/profile")
 
